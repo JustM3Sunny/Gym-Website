@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitSphere - Variant 3</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+             background-color: #0a0a0a;
+            color: #fff;
+        }
+        .bebas-neue {
+            font-family: 'Bebas Neue', sans-serif;
+        }
+        .parallax {
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .bg-gym-1 {
+            background-image: url('https://images.pexels.com/photos/2294361/pexels-photo-2294361.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+        }
+        .bg-gym-2 {
+             background-image: url('https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+        }
+        .bg-gym-3 {
+            background-image: url('https://images.pexels.com/photos/1552249/pexels-photo-1552249.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+        }
+
+        .glassmorphism {
+              background: rgba(255, 255, 255, 0.05);
+              box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+              backdrop-filter: blur(5px);
+              -webkit-backdrop-filter: blur(5px);
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <nav class="bg-transparent absolute top-0 left-0 w-full z-50 glassmorphism">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-3xl font-bold bebas-neue text-green-400">FitSphere</a>
+             <div class="flex items-center space-x-6">
+                <div class="hidden lg:flex space-x-6">
+                   <a href="#about" class="text-gray-300 hover:text-white transition duration-300">About</a>
+                    <a href="#membership" class="text-gray-300 hover:text-white transition duration-300">Membership</a>
+                     <a href="#schedule" class="text-gray-300 hover:text-white transition duration-300">Schedule</a>
+                     <a href="#trainers" class="text-gray-300 hover:text-white transition duration-300">Trainers</a>
+                     <a href="#virtual" class="text-gray-300 hover:text-white transition duration-300">Virtual Workouts</a>
+                     <a href="#amenities" class="text-gray-300 hover:text-white transition duration-300">Amenities</a>
+                     <a href="#shop" class="text-gray-300 hover:text-white transition duration-300">Shop</a>
+                     <a href="#blog" class="text-gray-300 hover:text-white transition duration-300">Blog</a>
+                </div>
+              <div class="lg:hidden">
+                        <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none focus:text-white">
+                            <i class="fas fa-bars text-2xl"></i>
+                        </button>
+              </div>
+
+                <a href="#contact" class="ml-4 bg-green-400 hover:bg-green-500 text-black px-4 py-2 rounded-md transition duration-300">
+                    Contact
+                </a>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden lg:hidden absolute top-full right-0 w-48 bg-black rounded-md shadow-lg mt-2 py-2 text-center">
+               <a href="#about" class="block px-4 py-2 text-gray-300 hover:bg-gray-700 transition duration-300">About</a>
+                <a href="#membership" class="block px-4 py-2 text-gray-300 hover:bg-gray-700 transition duration-300">Membership</a>
+                 <a href="#schedule" class="block px-4 py-2 text-gray-300 hover:bg-gray-700 transition duration-300">Schedule</a>
+                 <a href="#trainers" class="block px-4 py-2 text-gray-300 hover:bg-gray-700 transition duration-300">Trainers</a>
+                 <a href="#virtual" class="block px-4 py-2 text-gray-300 hover:bg-gray-700 transition duration-300">Virtual Workouts</a>
+                 <a href="#amenities" class="block px-4 py-2 text-gray-300 hover:bg-gray-700 transition duration-300">Amenities</a>
+                 <a href="#shop" class="block px-4 py-2 text-gray-300 hover:bg-gray-700 transition duration-300">Shop</a>
+                 <a href="#blog" class="block px-4 py-2 text-gray-300 hover:bg-gray-700 transition duration-300">Blog</a>
+            </div>
+    </nav>
+
+    <section class="relative h-screen flex items-center justify-center bg-gym-1 bg-center parallax">
+        <div class="absolute inset-0 bg-black opacity-60"></div>
+        <div class="container mx-auto text-center relative z-10">
+             <h1 class="bebas-neue text-5xl md:text-7xl font-bold mb-4 text-green-400">Unleash Your Potential</h1>
+           <p class="text-gray-300 text-lg md:text-xl mb-8">Achieve Your Fitness Goals with FitSphere</p>
+             <div class="flex justify-center space-x-4">
+                <a href="#membership" class="bg-green-400 hover:bg-green-500 text-black px-6 py-3 rounded-md transition duration-300">View Membership Plans</a>
+                 <a href="#contact" class="border border-green-400 hover:border-green-500 text-gray-300 px-6 py-3 rounded-md transition duration-300">Sign Up</a>
+            </div>
+        </div>
+    </section>
+
+  <section id="about" class="py-16 relative">
+        <div class="container mx-auto px-6">
+             <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 bebas-neue text-green-400">About Us</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+               <div>
+                    <img src="https://images.pexels.com/photos/3490390/pexels-photo-3490390.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Gym Interior" class="rounded-lg shadow-lg">
+                </div>
+                 <div>
+                    <p class="text-gray-300 text-lg mb-4">Welcome to FitSphere, where we are dedicated to helping you achieve your fitness goals. Our state-of-the-art facilities, expert trainers, and diverse range of classes are designed to support your journey towards a healthier lifestyle.</p>
+                    <p class="text-gray-300 text-lg mb-4">At FitSphere, we believe that fitness is more than just physical; it's a holistic approach to well-being. We offer personalized workout plans, nutritional guidance, and a supportive community to ensure you have everything you need to succeed.</p>
+                    <ul class="list-disc pl-5 mt-4 text-gray-300">
+                        <li>State-of-the-Art Equipment</li>
+                        <li>Expert Trainers</li>
+                        <li>Diverse Classes</li>
+                        <li>Supportive Community</li>
+                         <li>Personalized Plans</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="membership" class="py-16 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 bebas-neue text-green-400">Membership Plans</h2>
+             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glassmorphism rounded-lg p-6">
+                     <h3 class="text-2xl font-bold mb-4 text-green-400">Monthly</h3>
+                    <p class="text-gray-300 mb-4">Ideal for those who want flexibility and variety.</p>
+                     <ul class="list-disc pl-5 mt-2 text-gray-300">
+                        <li>Access to all group classes</li>
+                        <li>Use of gym facilities</li>
+                         <li>Limited access to pool</li>
+                    </ul>
+                    <p class="text-gray-300 font-bold mt-4 text-2xl">$99 / month</p>
+                    <a href="#contact" class="block mt-4 bg-green-400 hover:bg-green-500 text-black px-4 py-2 rounded-md transition duration-300 text-center">Choose Plan</a>
+                </div>
+                <div class="glassmorphism rounded-lg p-6">
+                     <h3 class="text-2xl font-bold mb-4 text-green-400">Quarterly</h3>
+                     <p class="text-gray-300 mb-4">Perfect for those committed to a 3-month journey.</p>
+                    <ul class="list-disc pl-5 mt-2 text-gray-300">
+                        <li>Access to all group classes</li>
+                        <li>Use of gym facilities</li>
+                        <li>Full access to pool</li>
+                    </ul>
+                     <p class="text-gray-300 font-bold mt-4 text-2xl">$250 / quarter</p>
+                    <a href="#contact" class="block mt-4 bg-green-400 hover:bg-green-500 text-black px-4 py-2 rounded-md transition duration-300 text-center">Choose Plan</a>
+                </div>
+                <div class="glassmorphism rounded-lg p-6">
+                    <h3 class="text-2xl font-bold mb-4 text-green-400">Yearly</h3>
+                     <p class="text-gray-300 mb-4">Best value for long-term fitness commitment.</p>
+                     <ul class="list-disc pl-5 mt-2 text-gray-300">
+                        <li>Unlimited group class access</li>
+                        <li>Full access to pool and spa</li>
+                        <li>Personal training session</li>
+                         <li>Discounts on merchandise</li>
+                    </ul>
+                    <p class="text-gray-300 font-bold mt-4 text-2xl">$800 / year</p>
+                   <a href="#contact" class="block mt-4 bg-green-400 hover:bg-green-500 text-black px-4 py-2 rounded-md transition duration-300 text-center">Choose Plan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="schedule" class="py-16 bg-gym-2 bg-center parallax">
+        <div class="container mx-auto px-6 relative">
+            <div class="absolute inset-0 bg-black opacity-60"></div>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 bebas-neue text-green-400 relative z-10">Class Schedule</h2>
+           <div class="relative z-10">
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="glassmorphism rounded-lg p-4">
+                      <h3 class="text-2xl font-bold mb-2 text-green-400">Yoga</h3>
+                     <p class="text-gray-300">Monday & Wednesday: 6:00 PM - 7:00 PM</p>
+                    <a href="#contact" class="block mt-4 bg-green-400 hover:bg-green-500 text-black px-4 py-2 rounded-md transition duration-300 text-center">Book Now</a>
+                  </div>
+                   <div class="glassmorphism rounded-lg p-4">
+                     <h3 class="text-2xl font-bold mb-2 text-green-400">HIIT</h3>
+                   <p class="text-gray-300">Tuesday & Thursday: 7:00 PM - 8:00 PM</p>
+                     <a href="#contact" class="block mt-4 bg-green-400 hover:bg-green-500 text-black px-4 py-2 rounded-md transition duration-300 text-center">Book Now</a>
+                    </div>
+                    <div class="glassmorphism rounded-lg p-4">
+                     <h3 class="text-2xl font-bold mb-2 text-green-400">Spinning</h3>
+                    <p class="text-gray-300">Friday & Saturday: 9:00 AM - 10:00 AM</p>
+                       <a href="#contact" class="block mt-4 bg-green-400 hover:bg-green-500 text-black px-4 py-2 rounded-md transition duration-300 text-center">Book Now</a>
+                    </div>
+                 </div>
+               </div>
+         </div>
+    </section>
+
+    <section id="trainers" class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 bebas-neue text-green-400">Our Expert Trainers</h2>
+             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glassmorphism rounded-lg p-6">
+                     <img src="https://images.pexels.com/photos/2261477/pexels-photo-2261477.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Trainer 1" class="rounded-full mx-auto mb-4">
+                     <h3 class="text-xl font-bold mb-2 text-green-400 text-center">John Doe</h3>
+                    <p class="text-gray-300 text-center">Certified Personal Trainer</p>
+                     <p class="text-gray-300 mt-4">John has over 10 years of experience helping clients achieve their fitness goals. He specializes in weight training and HIIT.</p>
+                </div>
+                <div class="glassmorphism rounded-lg p-6">
+                    <img src="https://images.pexels.com/photos/3863793/pexels-photo-3863793.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Trainer 2" class="rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-bold mb-2 text-green-400 text-center">Jane Smith</h3>
+                    <p class="text-gray-300 text-center">Yoga & Pilates Instructor</p>
+                    <p class="text-gray-300 mt-4">Jane is passionate about promoting holistic fitness through yoga and pilates. She has been teaching for over 8 years.</p>
+                </div>
+                <div class="glassmorphism rounded-lg p-6">
+                     <img src="https://images.pexels.com/photos/416778/pexels-photo-416778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Trainer 3" class="rounded-full mx-auto mb-4">
+                     <h3 class="text-xl font-bold mb-2 text-green-400 text-center">Mark Brown</h3>
+                    <p class="text-gray-300 text-center">Nutrition & Weight Loss Specialist</p>
+                    <p class="text-gray-300 mt-4">Mark helps clients optimize their nutrition for a balanced lifestyle. He's an expert in weight management and dietary planning.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="virtual" class="py-16 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 bebas-neue text-green-400">Virtual Workouts</h2>
+             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <img src="https://images.pexels.com/photos/3863793/pexels-photo-3863793.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Virtual Workout" class="rounded-lg shadow-lg">
+                </div>
+                <div>
+                   <p class="text-gray-300 text-lg mb-4">Enjoy fitness from the comfort of your home with our extensive library of on-demand workout videos. From HIIT to yoga, our trainers guide you through each session.</p>
+                     <p class="text-gray-300 text-lg mb-4">Join live classes via Zoom and get real-time feedback from our instructors. Stay connected, stay motivated, and never miss a workout.</p>
+                    <ul class="list-disc pl-5 mt-4 text-gray-300">
+                        <li>On-Demand Workout Videos</li>
+                       <li>Live Classes Via Zoom</li>
+                        <li>Variety of Training Styles</li>
+                        <li>Personalized Guidance</li>
+                    </ul>
+                     <a href="#contact" class="inline-block mt-6 bg-green-400 hover:bg-green-500 text-black px-4 py-2 rounded-md transition duration-300">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="amenities" class="py-16 bg-gym-3 bg-center parallax">
+         <div class="container mx-auto px-6 relative">
+            <div class="absolute inset-0 bg-black opacity-60"></div>
+           <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 bebas-neue text-green-400 relative z-10">Gym Amenities</h2>
+            <div class="relative z-10">
+                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="glassmorphism rounded-lg p-6">
+                         <i class="fas fa-dumbbell text-5xl text-green-400 mb-4 block text-center"></i>
+                        <h3 class="text-xl font-bold mb-2 text-center text-white">State-of-the-Art Gym Floor</h3>
+                        <p class="text-gray-300 text-center">Full range of weight training and cardio equipment.</p>
+                        </div>
+                        <div class="glassmorphism rounded-lg p-6">
+                             <i class="fas fa-swimming-pool text-5xl text-green-400 mb-4 block text-center"></i>
+                         <h3 class="text-xl font-bold mb-2 text-center text-white">Relaxing Pool & Spa</h3>
+                            <p class="text-gray-300 text-center">Enjoy our heated pool, sauna and spa.</p>
+                       </div>
+                        <div class="glassmorphism rounded-lg p-6">
+                         <i class="fas fa-blender text-5xl text-green-400 mb-4 block text-center"></i>
+                           <h3 class="text-xl font-bold mb-2 text-center text-white">Healthy Smoothie Bar</h3>
+                        <p class="text-gray-300 text-center">Refresh with our healthy smoothie options.</p>
+                     </div>
+                  </div>
+           </div>
+      </div>
+    </section>
+
+     <section id="shop" class="py-16">
+         <div class="container mx-auto px-6">
+             <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 bebas-neue text-green-400">Shop</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glassmorphism rounded-lg p-6">
+                       <img src="https://images.pexels.com/photos/1080696/pexels-photo-1080696.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Product 1" class="rounded-lg mx-auto mb-4">
+                   <h3 class="text-xl font-bold mb-2 text-center text-green-400">FitSphere T-Shirt</h3>
+                     <p class="text-gray-300 text-center">High-quality gym apparel.</p>
+                     <p class="text-gray-300 font-bold mt-2 text-center">$29.99</p>
+                     <a href="#contact" class="block mt-4 bg-green-400 hover:bg-green-500 text-black px-4 py-2 rounded-md transition duration-300 text-center">Buy Now</a>
+                  </div>
+                    <div class="glassmorphism rounded-lg p-6">
+                         <img src="https://images.pexels.com/photos/1552104/pexels-photo-1552104.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Product 2" class="rounded-lg mx-auto mb-4">
+                       <h3 class="text-xl font-bold mb-2 text-center text-green-400">Dumbbells</h3>
+                       <p class="text-gray-300 text-center">Perfect for strength training.</p>
+                       <p class="text-gray-300 font-bold mt-2 text-center">$49.99</p>
+                       <a href="#contact" class="block mt-4 bg-green-400 hover:bg-green-500 text-black px-4 py-2 rounded-md transition duration-300 text-center">Buy Now</a>
+                  </div>
+                    <div class="glassmorphism rounded-lg p-6">
+                      <img src="https://images.pexels.com/photos/348489/pexels-photo-348489.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Product 3" class="rounded-lg mx-auto mb-4">
+                        <h3 class="text-xl font-bold mb-2 text-center text-green-400">Water Bottle</h3>
+                         <p class="text-gray-300 text-center">Stay hydrated with style.</p>
+                       <p class="text-gray-300 font-bold mt-2 text-center">$14.99</p>
+                        <a href="#contact" class="block mt-4 bg-green-400 hover:bg-green-500 text-black px-4 py-2 rounded-md transition duration-300 text-center">Buy Now</a>
+                    </div>
+            </div>
+        </div>
+     </section>
+
+    <section id="blog" class="py-16 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 bebas-neue text-green-400">Blog</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glassmorphism rounded-lg p-6">
+                       <img src="https://images.pexels.com/photos/260375/pexels-photo-260375.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Blog 1" class="rounded-lg mx-auto mb-4">
+                    <h3 class="text-xl font-bold mb-2 text-green-400">The Importance of Nutrition</h3>
+                   <p class="text-gray-300">Learn about the vital role of nutrition in your fitness journey. We've outlined tips and strategies to keep you on track.</p>
+                     <a href="#" class="block mt-4 text-green-400 hover:underline transition duration-300">Read More</a>
+               </div>
+                <div class="glassmorphism rounded-lg p-6">
+                      <img src="https://images.pexels.com/photos/2294361/pexels-photo-2294361.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Blog 2" class="rounded-lg mx-auto mb-4">
+                    <h3 class="text-xl font-bold mb-2 text-green-400">Effective HIIT Workouts</h3>
+                    <p class="text-gray-300">Explore the benefits of HIIT workouts and how they can maximize your fitness results. Discover our routines.</p>
+                    <a href="#" class="block mt-4 text-green-400 hover:underline transition duration-300">Read More</a>
+               </div>
+                <div class="glassmorphism rounded-lg p-6">
+                   <img src="https://images.pexels.com/photos/3764709/pexels-photo-3764709.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Blog 3" class="rounded-lg mx-auto mb-4">
+                    <h3 class="text-xl font-bold mb-2 text-green-400">Mental Health and Fitness</h3>
+                    <p class="text-gray-300">Understand the connection between mental well-being and physical fitness. We'll guide you to achieving overall wellness.</p>
+                    <a href="#" class="block mt-4 text-green-400 hover:underline transition duration-300">Read More</a>
+              </div>
+          </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-16">
+         <div class="container mx-auto px-6">
+              <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 bebas-neue text-green-400">Contact Us</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-green-400">Send Us a Message</h3>
+                    <form>
+                         <div class="mb-4">
+                             <input type="text" placeholder="Your Name" class="w-full p-2 rounded-md bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-green-400">
+                         </div>
+                        <div class="mb-4">
+                           <input type="email" placeholder="Your Email" class="w-full p-2 rounded-md bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-green-400">
+                         </div>
+                         <div class="mb-4">
+                            <textarea placeholder="Your Message" rows="4" class="w-full p-2 rounded-md bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-green-400"></textarea>
+                        </div>
+                       <button type="submit" class="bg-green-400 hover:bg-green-500 text-black px-4 py-2 rounded-md transition duration-300">Submit</button>
+                    </form>
+                 </div>
+               <div>
+                    <h3 class="text-2xl font-bold mb-4 text-green-400">Our Location</h3>
+                   <p class="text-gray-300 mb-4">123 Fitness Street, Cityville, CA 90001</p>
+                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.896694520891!2d-73.9851089!3d40.705865599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a27e2f24131%3A0x64ffc98d240c0163!2sWorld%20Trade%20Center!5e0!3m2!1sen!2sus!4v1718640944730!5m2!1sen!2sus" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                     <p class="text-gray-300 mt-4"><strong>Phone:</strong> (123) 456-7890</p>
+                    <p class="text-gray-300"><strong>Email:</strong> info@fitsphere.com</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition duration-300"><i class="fab fa-facebook text-2xl"></i></a>
+                         <a href="#" class="text-gray-300 hover:text-white transition duration-300"><i class="fab fa-twitter text-2xl"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white transition duration-300"><i class="fab fa-instagram text-2xl"></i></a>
+                    </div>
+                </div>
+           </div>
+        </div>
+   </section>
+
+    <footer class="bg-gray-800 py-8">
+         <div class="container mx-auto px-6 text-center">
+            <div class="mb-4">
+               <a href="#" class="text-gray-300 hover:text-white mx-2 transition duration-300">Home</a>
+              <a href="#about" class="text-gray-300 hover:text-white mx-2 transition duration-300">About</a>
+              <a href="#membership" class="text-gray-300 hover:text-white mx-2 transition duration-300">Membership</a>
+             <a href="#schedule" class="text-gray-300 hover:text-white mx-2 transition duration-300">Schedule</a>
+            <a href="#trainers" class="text-gray-300 hover:text-white mx-2 transition duration-300">Trainers</a>
+               <a href="#virtual" class="text-gray-300 hover:text-white mx-2 transition duration-300">Virtual Workouts</a>
+               <a href="#amenities" class="text-gray-300 hover:text-white mx-2 transition duration-300">Amenities</a>
+                <a href="#shop" class="text-gray-300 hover:text-white mx-2 transition duration-300">Shop</a>
+               <a href="#blog" class="text-gray-300 hover:text-white mx-2 transition duration-300">Blog</a>
+                 <a href="#contact" class="text-gray-300 hover:text-white mx-2 transition duration-300">Contact</a>
+            </div>
+           <div class="flex justify-center space-x-4 mb-4">
+               <a href="#" class="text-gray-300 hover:text-white transition duration-300"><i class="fab fa-facebook text-2xl"></i></a>
+              <a href="#" class="text-gray-300 hover:text-white transition duration-300"><i class="fab fa-twitter text-2xl"></i></a>
+                <a href="#" class="text-gray-300 hover:text-white transition duration-300"><i class="fab fa-instagram text-2xl"></i></a>
+            </div>
+            <div class="text-gray-500 flex flex-col items-center">
+                <p class="mb-2">&copy; 2024 FitSphere. All Rights Reserved.</p>
+                <p class="text-sm">Created with <span class="text-red-500">♥</span> by Shannniiiii....</p>
+            </div>
+        </div>
+   </footer>
+
+   <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+   </script>
+</body>
+</html>
